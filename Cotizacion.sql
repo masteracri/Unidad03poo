@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS sistemas CHARACTER SET utf8mb4;
+USE sistemas;
+CREATE TABLE IF NOT EXISTS Cotizacion (
+ idCotizacion INT AUTO_INCREMENT PRIMARY KEY,
+ numCotizacion VARCHAR(45) NOT NULL UNIQUE,
+ descripcion VARCHAR(255) NOT NULL,
+ precio FLOAT NOT NULL,
+ porcentaje FLOAT NOT NULL,
+ plazos INT NOT NULL,
+ fecha DATE NOT NULL,
+ status INT NOT NULL DEFAULT 0
+);
